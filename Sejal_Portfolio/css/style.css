@@ -1,0 +1,36 @@
+body {
+	font-family: "Lato", sans-serif;
+	color: #747704;
+	font-weight: 300;
+}
+
+.text-muted {
+	color:#bcbbbb;
+}
+
+.text-thin {
+	font-weight: 100;
+}
+
+.title-logo {
+	margin-top: 20px;
+}
+
+.title-super {
+	font-size: 60px;
+}
+
+.size {
+	height: 200px;
+	width: 350px;
+}
+
+.icon	{
+	height: 50px;
+	width: 50px;
+}
+
+.connect {
+	padding-right: 45px;
+}
+
