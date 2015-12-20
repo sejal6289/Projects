@@ -1,0 +1,391 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  padding:0;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+/* Typeography */
+
+h1 {
+  font-weight: normal;
+  font-size: 40px;
+  color: #1199C3;
+  line-height: 55px;
+  display: block;
+  margin-top: 1em;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 24px;
+  color: #484848;
+  line-height: 29px;
+  padding: 10px;
+  margin: 0 0 .5em 0;
+  border-bottom: 1px solid #DEDEDE;
+  text-align: center;
+  clear: both;
+  width: 100%;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 18px;
+  color: #000000;
+  line-height: 22px;
+  margin-top: .5em;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 14px;
+  color: #4A4A4A;
+  line-height: 17px;
+}
+
+h2, h3, h4, h5 {
+  padding:10px;
+}
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: left;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+p {
+  font-size: 14px;
+  color: #333333;
+  line-height: 21px;
+}
+
+a {
+  color: #1199C3;
+  text-decoration: none;
+  display: block;
+}
+
+/* Header */
+
+.welcome-message {
+  position: relative;
+  font-size: 18px;
+  color: #FFFFFF;
+  padding: .5em 1em;
+  margin: .5em;
+  display: inline-block;
+  background: #1199C3;
+  border-radius: 20px;
+}
+
+.welcome-message:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #1199C3 transparent;
+  top: -20px;
+  left: 40%;
+}
+
+#skillsH3 {
+  color: #FFFFFF;
+  background: #555555;
+  padding: 1em 0 0 0;
+}
+
+.orange-text {
+  color: #777777;
+}
+
+.white-text {
+  color: #DEDEDE;
+
+}
+
+.gray {
+  padding-bottom: 10px;
+  clear:both;
+}
+
+.dark-gray {
+
+}
+
+#header {
+  background-color: #484848;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.flex-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: space-around;
+  -ms-flex-direction: row;
+  -ms-justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+  padding: 10px;
+}
+
+.flex-item {
+  padding: .5em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#topContacts {
+  padding-top: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2.5%
+}
+
+.biopic {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 1em auto;
+  border-radius: 50%;
+  border: 8px solid #555555;
+  background: #555555;
+}
+
+/* Bar chart stuff */
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: #4A4A4A;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  height: 12px;
+  color: white;
+  display: inline-block;
+}
+
+span {
+  padding: 5px;
+}
+
+hr {
+  display: none;
+}
+
+#skills {
+  background: #555555;
+  width: 100%;
+}
+
+/* Main Content */
+
+#main {
+  background: #EFEFEF;
+  float: left;
+  width: 100%;
+}
+
+#workExperience, #projects, #education, #letsConnect  {
+  padding: 1em;
+  max-width: 1170px;
+  margin: 1em auto;
+}
+
+.education-entry, .project-entry, .work-entry {
+  padding: 1em;
+}
+
+.work-entry {
+  border-radius: 10px;
+}
+
+.work-entry:nth-child(2n+3), .project-entry:nth-child(2n+3) {
+  background: #DEDEDE;
+}
+
+.project-entry {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  border-radius: 10px;
+  float: left;
+}
+
+.project-entry a, .project-entry p {
+  text-align: left;
+}
+
+.project-entry img {
+  margin: 10px;
+  display: inline-block;
+  max-width: 46%;
+  height: auto;
+}
+
+#education h3 {
+  font-weight: normal;
+  color: #484848;
+  padding: 1em 0 0 1em;
+  border-top: 1px solid #DEDEDE;
+}
+
+.education-entry {
+  color: #666666;
+  padding: 1em 0 .5em .5em;
+  margin: 0 1em;
+}
+
+
+#mapDiv {
+  max-width: 1170px;
+  margin: 1em auto;
+}
+
+/* Map  Items */
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+  background: #DEDEDE;
+  border: 8px solid #DEDEDE;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+/* Footer  Items */
+
+footer {
+  text-align: center;
+}
+
+#letsConnect {
+  text-align: center;
+}
+
+#footerContacts .white-text {
+  color: #333;
+}
+
+button {
+  font-size: 16px;
+  margin: 0 auto 2em;
+  padding: .5em 1em;
+  border: 0;
+  border-radius: 20px;
+  color: #FFFFFF;
+  background: #DDDDDD;
+}
+
+button:hover {
+  background: #FFFFFF;
+  color: #CCCCCC;
+}
+
+button:focus, button:active {
+  border: none;
+  outline: none;
+  background: #DDDDDD;
+  color: #CCCCCC;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+  #letsConnect {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .biopic {
+    width: 175px;
+    height: 175px;
+  }
+
+}
+
+@media only screen and (max-width: 750px) {
+  #letsConnect {
+    margin-top: 10%;
+  }
+
+  .biopic {
+    width: 150px;
+    height: 150px;
+  }
+
+  h2 {
+  font-size: 20px;
+  }
+
+  .flex-box {
+  flex-direction: column;
+  }
+
+  #mapDiv {
+  padding-bottom: 10%;
+  }
+
+  #workExperience, #projects, #education, #letsConnect  {
+  padding: 0;
+  }
+
+  .work-entry, .project-entry {
+  border-radius: 0;
+  }
+
+  .project-entry img {
+  margin: 0;
+  max-width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 750px) {
+  #skillsH3,
+  .biopic {
+    display: block;
+  }
+}
