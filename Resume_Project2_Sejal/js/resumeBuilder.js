@@ -13,8 +13,8 @@ var bio = {
 		"github" : "sejal6289",
 		"location" : "Hillsboro, Oregon"
 	}],
-	"welcomemessage" : "<br>Seeking a Full-time opportunity to utilize and contribute my technical, inter-personal skills and confidence towards the benefit of the company and inherit the experience in my professional career development.",
-	"skills" : ["HTML","CSS", "JavaScript", "Java", "C++"],
+	"welcomemessage" : "<br>This letter is to express my interest for Web Developer. I have expertise in HTML, CSS, Javascript, Java, PL/SQL. The unique mix of my software development experience, programming skills, projects and motivation to excel makes me an ideal fit for this position. I have 3 years of collective experience in Software development after completing my Bachelor’s degree in Information Technology from University of Mumbai, India.",
+	"skills" : ["HTML/HTML5","CSS/Bootstrap", "JavaScript(Jquery)", "Java", "C++", "C", "PL/SQL", "Android development"],
 	"biopic" : "images/me.jpg"
 }
 
@@ -119,11 +119,12 @@ education.display = function()
 		var formatedtitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
 		var formatedschool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
 		var formateddates = HTMLonlineDates.replace("%data%", onlineCourse.dates);
+		var formatedURL = HTMLonlineURL.replace("%data%", onlineCourse.url);
 		
 		$('#education').append(HTMLschoolStart);
 		$('.education-entry:last').append(formatedtitle + formatedschool);
 		$('.education-entry:last').append(formateddates);
-		$('.education-entry:last').children('a').attr("href", onlineCourse.url);
+		$('.education-entry:last').append(formatedURL);
 	}
 
 }
