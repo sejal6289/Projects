@@ -13,7 +13,7 @@ var bio = {
 		"github" : "sejal6289",
 		"location" : "Hillsboro, Oregon"
 	}],
-	"welcomemessage" : "<br>This letter is to express my interest for Web Developer. I have expertise in HTML, CSS, Javascript, Java, PL/SQL. The unique mix of my software development experience, programming skills, projects and motivation to excel makes me an ideal fit for this position. I have 3 years of collective experience in Software development after completing my Bachelor’s degree in Information Technology from University of Mumbai, India.",
+	"welcomemessage" : "<br>I have positive attitude, creativity and a hands-on approach to design and implementation. With fundamental values of client satisfaction, quality and teamwork, I maintain a constant vision of innovation to remain on the cutting edge of design technology.",
 	"skills" : ["HTML/HTML5","CSS/Bootstrap", "JavaScript(Jquery)", "Java", "C++", "C", "PL/SQL", "Android development"],
 	"biopic" : "images/me.jpg",
 	"pdf" : "images/pdf.gif",
