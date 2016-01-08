@@ -16,6 +16,15 @@ html {
   overflow: auto;
 }
 
+#main{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1em;
+}
+
+#name {
+  color: #f5ae23;
+}
 
 body,
 div,
@@ -35,13 +44,14 @@ h6 {
 h1{
   font-weight: normal;
   font-size: 40px;
-  color: #00ffbf;
+  color: #0066ff;
   line-height: 55px;
   display: block; 
 }
 
 hr {
   color: black;
+  width: 100%;
 }
 
 .clear-fix {
@@ -54,13 +64,33 @@ hr {
   padding: 0 5%;
 }
 
+#education {
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+}
+
+.education-display {
+  color : #1199c3;
+  margin-top: 1em;
+}
+
 .education-entry {
   color: #666666;
   padding: 1em 0 .5em .5em;
   margin: 0 1em;
   padding: 0 5%;
+  width: 95%;
 }
 
+.onlinetitle{
+  color: #1199c3;
+  text-decoration: none;
+  margin-top: 8px;
+  display: block;
+}
 
 h2 {
   font-weight: bold;
@@ -76,6 +106,7 @@ h3 {
   font-size: 20px;
   color: #000;
   line-height: 22px;
+  margin-left: 16px;
 }
 
 h4 {
@@ -111,16 +142,33 @@ h5 {
 
 }
 
+.gpa-text {
+  float: right;
+}
+
 p {
   font-size: 14px;
   color: #333;
   line-height: 21px;
 }
 
+.top-margin {
+  margin-top: 8px;
+}
+
+.no-top-margin {
+  margin-left: 20px;
+}
+
 a {
   color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
+  display: block;
+}
+
+.text-format {
+  color: #1199c3;
+  text-decoration: none;
   display: block;
 }
 
@@ -154,7 +202,7 @@ a {
 
 .white-text {
   font-weight: bold;
-  color: #fff;
+  color: #999999;
 }
 
 .gray {
@@ -169,7 +217,8 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  /*background-color: #484848; (gray color background)*/
+  background-color: #000000;
   text-align: center;
   color: #FFFFFF;
 }
@@ -202,6 +251,40 @@ ul {
   margin-top: 20px;
 }
 
+table {
+  border: 1px solid;
+  border-color: black;
+  vertical-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+.right-side {
+  float: right;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.download-text {
+  font-size: 25px;
+}
+
+#download {
+  float: right;
+  width: 100%;
+  color: #999999;
+}
+
+.icon-size {
+  width: 45px;
+  height: 45px;
+}
+
 img {
   padding: 10px;
 }
@@ -212,6 +295,7 @@ span {
 
 #lets-connect {
   text-align: center;
+  width: 100%;
 }
 
 /* Media queries to handle various device widths */

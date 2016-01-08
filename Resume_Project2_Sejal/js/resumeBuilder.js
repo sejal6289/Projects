@@ -1,13 +1,13 @@
 
 var formattedName, formattedRole;
 var myName ="Sejal Shah";
-var myRole="   Web developer";
+var myRole="Web developer";
 
 var bio = {
 	"name" : myName,
 	"role" : myRole,
 	"contacts" : [{
-		"mobile" : "444-44-4444",
+		"mobile" : "971-777-9701",
 		"email" : "sejal6289@gmail.com",
 		"linkedin" : "sejal6289",
 		"github" : "sejal6289",
@@ -15,7 +15,11 @@ var bio = {
 	}],
 	"welcomemessage" : "<br>This letter is to express my interest for Web Developer. I have expertise in HTML, CSS, Javascript, Java, PL/SQL. The unique mix of my software development experience, programming skills, projects and motivation to excel makes me an ideal fit for this position. I have 3 years of collective experience in Software development after completing my Bachelor’s degree in Information Technology from University of Mumbai, India.",
 	"skills" : ["HTML/HTML5","CSS/Bootstrap", "JavaScript(Jquery)", "Java", "C++", "C", "PL/SQL", "Android development"],
-	"biopic" : "images/me.jpg"
+	"biopic" : "images/me.jpg",
+	"pdf" : "images/pdf.gif",
+	"doc" : "images/doc.gif",
+	"pdfResume" : "downloads/Sejal_resume.pdf",
+	"docResume" : "downloads/Sejal_resume.doc"
 }
 
 
@@ -24,6 +28,13 @@ bio.display = function() {
 	var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
 	var formattedImage = HTMLbioPic.replace("%data%",bio.biopic);
 	var formattedMessage = HTMLwelcomeMsg.replace("%data%",bio.welcomemessage);
+	var formattedPdf = HTMLresumePdf.replace("%data%",bio.pdf);
+	var formattedDoc = HTMLresumeDoc.replace("%data%",bio.doc);
+	var formattedDownload = formattedPdf + formattedDoc;
+
+	$("#download").append(formattedDownload).prepend(HTMLresumeDownload);
+	$('#pdf').attr("href", bio.pdfResume);
+	$('#doc').attr("href", bio.docResume);
 	$("#header").prepend(formattedRole).prepend(formattedName).append(formattedImage,formattedMessage);
 	$("#header").append(HTMLskillsStart);
 
@@ -48,40 +59,46 @@ bio.display = function() {
 var education = {
 	"school" : [
 		{
-			"sname" : "RGIT",
-			"scity" : "Mumbai",
-			"Major" : ["IT"],
-			"gradyear" : "2010",
-			"degree" : "Bachelors",
-			"gpa" : "4.0" 
+			"sname" : "Rajiv Gandhi Institute of Technology, University of Mumbai",
+			"scity" : "Mumbai, India",
+			"Major" : ["Information Technology"],
+			"gradyear" : "2007-2010",
+			"degree" : "Bachelors Of Engineering",
+			"gpa" : "3.6" 
 		},
 		{	
-			"sname" : "TPoly",
-			"scity" : "Mumbai",
-			"Major" : ["IT"],
-			"gradyear" : "2007",
+			"sname" : "Thakur Polytechnic, Maharashtra State Board of Technical Education",
+			"scity" : "Mumbai, India",
+			"Major" : ["Information Technology"],
+			"gradyear" : "2004-2007",
 			"degree" : "Diploma",
-			"gpa" : "4.0" 
+			"gpa" : "3.75" 
 		}
 	],
 	"onlineCourse" : [
 		{
-			"title" : "JavaScript Crash Course",
-			"school" : "udacity",
-			"dates" : "2015",
-			"url" : "www.udacity.com"
+			"title" : "Front-End Web Developer Nanodegree",
+			"schoolurl" : "https://www.udacity.com/",
+			"school" : "Udacity",
+			"dates" : "Certification In Progress",
+			"url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
+			"info" : "Click for more information"
 		},
 		{
-			"title" : "HTML",
-			"school" : "udacity",
-			"dates" : "2015",
-			"url" : "www.udacity.com"
+			"title" : " HTML, CSS & JavaScript",
+			"schoolurl" : "https://www.coursera.org/",
+			"school" : "Coursera",
+			"dates" : "Certified - November, 2015",
+			"url" : "https://www.coursera.org/account/accomplishments/certificate/TGLRTQB2EAYP",
+			"info" : "View Certificate"
 		},
 		{
-			"title" : "CSS",
-			"school" : "udacity",
-			"dates" : "2015",
-			"url" : "www.udacity.com"
+			"title" : "Programming Mobile Applications for Android Handheld Systems",
+			"schoolurl" : "https://www.coursera.org/",
+			"school" : "Coursera",
+			"dates" : "Certified - February, 2015",
+			"url" : "https://www.coursera.org/account/accomplishments/records/Tsj6EeQD5NLk2KYY",
+			"info" : "View Certificate"
 		}
 
 	]
@@ -102,11 +119,12 @@ education.display = function()
 		var formattedGpa = HTMLschoolGpa.replace("%data%", school.gpa);
 
 		$('#education').append(HTMLschoolStart);
-		$('.education-entry:last').append(formatedname + formateddegree);
-		$('.education-entry:last').append(formatedlocation);
-		$('.education-entry:last').append(formateddates);
-		$('.education-entry:last').append(formatedmajors);
+		$('.education-entry:last').append(formateddegree);
 		$('.education-entry:last').append(formattedGpa);
+		$('.education-entry:last').append(formatedname);
+		$('.education-entry:last').append(formateddates); 
+		$('.education-entry:last').append(formatedlocation);		
+		$('.education-entry:last').append(formatedmajors);
 		//$('.education-entry:last').children('a').attr("href", school.url);
 
 		
@@ -120,11 +138,12 @@ education.display = function()
 		var formatedschool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
 		var formateddates = HTMLonlineDates.replace("%data%", onlineCourse.dates);
 		var formatedURL = HTMLonlineURL.replace("%data%", onlineCourse.url);
+		var formatedURL2 = HTMLonlineURL2.replace("%data%", onlineCourse.info);
 		
 		$('#education').append(HTMLschoolStart);
 		$('.education-entry:last').append(formatedtitle + formatedschool);
 		$('.education-entry:last').append(formateddates);
-		$('.education-entry:last').append(formatedURL);
+		$('.education-entry:last').append(formatedURL + formatedURL2);
 	}
 
 }
@@ -134,16 +153,16 @@ var work = {
 	"jobs" : [{
 	"employer" : "Probity Soft",
 	"title" : "Software developer",
-	"dates" : "July 2013 to Feb 2014",
+	"dates" : "July 2013 to February 2014",
 	"location" : "Mumbai, India",
-	"Desc" : "Worked as a Technical Developer to develop File Tracking system for our client MHADA, a renowned company in India. MHADA allots houses using lottery system to the applicants. Post allotment the applicants, employees, management and other parties involved has to undergo a lot of processing and maintaining of data. We created a system as per the requirement that handled all of the post allotment work in a very efficient manner. By just logging into the system, one can upload, download, edit and track the information as per the rights assigned to them."
+	"Desc" : "Designed an online tracking systems for a construction company which was appreciated by employees, costumer and other 3rd party users. Collaborated with design engineers and testers for the best results. Responsible for creation of brand identity, web site header, menu, information containers, grid styles, navigation, forms, User components and application widgets with suitable color schemes."
 	},
 	{
-	"employer" : "Capgemini",
+	"employer" : "Capgemini India",
 	"title" : "Senior Software Engineer",
-	"dates" : "Aug 2010 to June 2013",
+	"dates" : "August 2010 to June 2013",
 	"location" : "Mumbai, India",
-	"Desc" : "Worked as a Technical Consultant for a US based client. A web based employee portal was designed and developed as per the requirement. Through this portal, employees had all the information in an organized and efficient manner. The product provided useful, relevant and personalized benefits information empowering employees to make benefit- related decisions and track their records easily. "
+	"Desc" : "Designed a HRMS portal that provided useful, relevant and personalized benefit information empowering employees to make benefit- related decisions and track their records easily.Worked with development, business, Testing team and relevant user groups to execute, analyze, communicate & update about the project.Successfully executed the entire test cases and fixed any bugs/issues identified during the test cycles."
 	}
 ]
 };
@@ -171,18 +190,24 @@ var projects = {
 	"projects": [{
 			"title": "Portfolio Site",
 			"dates": "Dec 2015",
-			"desc": "As a part of Udacity project, Developed a responsive website that displays images, descriptions and links to each portfolio projects using HTML5, CSS and bootstrap framework.",
+			"desc": "Built a responsive website that displays images, descriptions and links to each portfolio projects using HTML5, CSS and bootstrap framework. Created modals to provide detailed description of each project.",
 			"images": []
 		}, {
 			"title": "Modern Art UI",
 			"dates": "Feb 2015",
-			"desc": "As a part of Coursera project, Designed and developed a basic Android app that has a very interesting layout. It has different shapes and colors. When the user seek to change the color of those shapes it uses a slide bar. The app has more user option in menu and could navigate through the website of modern art and artists.",
+			"desc": "Developed android app with an interesting layout containing different shapes whose color can be changed using the slide bar included. Built a menu for users to navigate through more options and reach website of modern art and artists.",
 			"images": []
 		},
 		{
 			"title": "Vsec (Voice Security System)",
 			"dates": "March 2010",
-			"desc": "Designed a Voice security system using the concepts of Biometrics. Sound / speech of speaker was verified to authenticate the user.  Autoregressive model was mainly used to verify the user’s voice in different conditions. The system was developed using MATLAB and MySQL was used for database.",
+			"desc": "Developed a Voice security system that uses voice of user for verification using MATLAB and MySQL. Designed using concepts of Biometrics and Autoregressive model that uses user’s voice for verification in various conditions.",
+			"images": []
+		},
+		{
+			"title": "Object Diagram Modeler",
+			"dates": "March 2007",
+			"desc": "Designed a real time System that helps user to understand system structure and requirement at initial stage of Software Development. It accepts the input from the user on a general basis and generates the Object diagram depicting essential details. This was developed using VB 6.0 and MySQL was used for database.",
 			"images": []
 		}
 ]
@@ -227,6 +252,6 @@ function inName(name){
 
 <!-- internationalize name -->
 
-$("#main").append(internationalizeButton);
+//$("#main").append(internationalizeButton);
 
 $("#mapDiv").append(googleMap);
