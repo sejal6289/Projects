@@ -66,6 +66,7 @@ hr {
 
 #education {
   width: 100%;
+  margin-top: 10px;
 }
 
 .row {
@@ -163,7 +164,16 @@ p {
 a {
   color: #1199c3;
   text-decoration: none;
+}
+
+.display {
   display: block;
+  margin-top: .5em; 
+  color: #1199c3;
+}
+
+.left-indent {
+  margin-left: 20px;
 }
 
 .text-format {

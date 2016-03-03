@@ -10,7 +10,9 @@ var bio = {
 		"mobile" : "971-777-9701",
 		"email" : "sejal6289@gmail.com",
 		"linkedin" : "sejal6289",
+		"lLink" : "https://www.linkedin.com/in/sejal6289",
 		"github" : "sejal6289",
+		"gLink" : "https://github.com/sejal6289/Projects",
 		"location" : "Hillsboro, Oregon"
 	}],
 	"welcomemessage" : "<br>I have positive attitude, creativity and a hands-on approach to design and implementation. With fundamental values of client satisfaction, quality and teamwork, I maintain a constant vision of innovation to remain on the cutting edge of design technology.",
@@ -47,8 +49,10 @@ bio.display = function() {
 		var formattedMobile = HTMLmobile.replace("%data%",bio.contacts[contact].mobile);
 		var formattedEmail = HTMLemail.replace("%data%",bio.contacts[contact].email);
 		var formattedGithub = HTMLgithub.replace("%contact%","Github").replace("%data%",bio.contacts[contact].github);
+		$('#github').attr("href", bio.contacts[contact].gLink);
 		var formattedLocation =HTMLlocation.replace("%data%", bio.contacts[contact].location);
 		var formattedTwitter =HTMLlinkedin.replace("%data%", bio.contacts[contact].linkedin);
+		$('#linkedin').attr("href", bio.contacts[contact].lLink);
        	$("#footerContacts").append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
 		$("#topContacts").append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
 	};
