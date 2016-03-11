@@ -19,7 +19,7 @@ var bio = {
 	"pdf" : "images/pdf.gif",
 	"doc" : "images/doc.gif",
 	"pdfResume" : "downloads/Sejal_resume.pdf",
-	"docResume" : "downloads/Sejal_resume.doc"
+	"docResume" : "downloads/Sejal_resume.docx"
 }
 
 
