@@ -17,7 +17,7 @@ var bio = {
 	"skills" : ["HTML/HTML5","CSS/Bootstrap", "JavaScript(Jquery)", "Java", "C++", "C", "PL/SQL", "Android development"],
 	"biopic" : "images/me.jpg",
 	"pdf" : "images/pdf.gif",
-	"doc" : "images/doc.gif",
+	"doc" : "images/docx.gif",
 	"pdfResume" : "downloads/Sejal_resume.pdf",
 	"docResume" : "downloads/Sejal_resume.docx"
 }
