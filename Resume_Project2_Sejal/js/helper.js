@@ -23,8 +23,8 @@ var HTMLheaderRole = '<span class="white-text">%data%</span><hr/><br>';
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">linkedin</span><a href="https://www.linkedin.com/in/sejal6289" target ="_blank" id="linkedin" ><span class="white-text">%data%</span></a></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><a href="https://github.com/sejal6289/Projects" target ="_blank" id="github" ><span class="white-text">%data%</span></a></li>';
+var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">linkedin</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
@@ -37,15 +37,15 @@ var HTMLskills = '<li class="flex-item change"><span class="white-text">%data%</
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<span class="text-format">%data%';
 var HTMLworkTitle = ' - %data%</span>';
-var HTMLworkDates = '<div class="date-text left-indent">%data%</div>';
+var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p class="left-indent"><br>%data%</p>';
+var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-/*var HTMLprojectTitle = '<a class="display" href="#">%data%</a>';*/
-var HTMLprojectTitle = '<span class="display">%data%</span>';
-var HTMLprojectDates = '<div class="date-text left-indent">%data%</div>';
-var HTMLprojectDescription = '<br><p class="left-indent">%data%</p>';
+var HTMLprojectLink = '<a href="%data%" target="_blank"';
+var HTMLprojectTitle = '>%data%</a><br>';
+var HTMLprojectDates = '<div class="date-text">%data%</div>';
+var HTMLprojectDescription = '<br><p>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
@@ -53,10 +53,10 @@ var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolDegree = '<div class="row"><div class="education-display col-md-8">%data%</div>';
 var HTMLschoolGpa = '<div class="gpa-text col-md-4">GPA: %data%</div> </div>';
 
-var HTMLschoolName = '<div class="left-indent">%data%</div>';
-var HTMLschoolDates = '<div class="date-text left-indent">%data%</div>';
+var HTMLschoolName = '<div>%data%</div>';
+var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<div class="left-indent"><em><br>Major: %data%</em></div>';
+var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 
 var HTMLonlineClasses = '<h3>Online Courses</h3>';

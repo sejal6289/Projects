@@ -10,9 +10,7 @@ var bio = {
 		"mobile" : "971-777-9701",
 		"email" : "sejal6289@gmail.com",
 		"linkedin" : "sejal6289",
-		"lLink" : "https://www.linkedin.com/in/sejal6289",
 		"github" : "sejal6289",
-		"gLink" : "https://github.com/sejal6289/Projects",
 		"location" : "Hillsboro, Oregon"
 	}],
 	"welcomemessage" : "<br>I have positive attitude, creativity and a hands-on approach to design and implementation. With fundamental values of client satisfaction, quality and teamwork, I maintain a constant vision of innovation to remain on the cutting edge of design technology.",
@@ -49,10 +47,8 @@ bio.display = function() {
 		var formattedMobile = HTMLmobile.replace("%data%",bio.contacts[contact].mobile);
 		var formattedEmail = HTMLemail.replace("%data%",bio.contacts[contact].email);
 		var formattedGithub = HTMLgithub.replace("%contact%","Github").replace("%data%",bio.contacts[contact].github);
-		$('#github').attr("href", bio.contacts[contact].gLink);
 		var formattedLocation =HTMLlocation.replace("%data%", bio.contacts[contact].location);
 		var formattedTwitter =HTMLlinkedin.replace("%data%", bio.contacts[contact].linkedin);
-		$('#linkedin').attr("href", bio.contacts[contact].lLink);
        	$("#footerContacts").append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
 		$("#topContacts").append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
 	};
@@ -191,25 +187,37 @@ var work = {
 	
 
 var projects = {
-	"projects": [{
+	"projects": [
+		{
+			"title": "Classic Arcade Game Clone",
+			"link" : "https://rawgit.com/sejal6289/Project-3---Arcade-game-clone/master/index.html",
+			"dates": "March 2016",
+			"desc": "Developed Classic Arcade Game Clone using Object Oriented JavaScript and HTML5 Canvas. Incorporated player, enemies and other entities using HTML5. Created functionality like detecting collision, updating score & lives using OO javascript.",
+			"images": []
+		},
+		{
 			"title": "Portfolio Site",
+			"link": "https://rawgit.com/sejal6289/Projects/master/Sejal_Portfolio/Portfolio%20site_updated.html",
 			"dates": "Dec 2015",
 			"desc": "Built a responsive website that displays images, descriptions and links to each portfolio projects using HTML5, CSS and bootstrap framework. Created modals to provide detailed description of each project.",
 			"images": []
 		}, {
 			"title": "Modern Art UI",
+			"link" : "#",
 			"dates": "Feb 2015",
 			"desc": "Developed android app with an interesting layout containing different shapes whose color can be changed using the slide bar included. Built a menu for users to navigate through more options and reach website of modern art and artists.",
 			"images": []
 		},
 		{
 			"title": "Vsec (Voice Security System)",
+			"link" : "#",
 			"dates": "March 2010",
 			"desc": "Developed a Voice security system that uses voice of user for verification using MATLAB and MySQL. Designed using concepts of Biometrics and Autoregressive model that uses user’s voice for verification in various conditions.",
 			"images": []
 		},
 		{
 			"title": "Object Diagram Modeler",
+			"link" : "#",
 			"dates": "March 2007",
 			"desc": "Designed a real time System that helps user to understand system structure and requirement at initial stage of Software Development. It accepts the input from the user on a general basis and generates the Object diagram depicting essential details. This was developed using VB 6.0 and MySQL was used for database.",
 			"images": []
@@ -221,8 +229,11 @@ projects.display = function() {
 	for (project in projects.projects) {
 			$("#projects").append(HTMLprojectStart);
 
+			var formattedLink = HTMLprojectLink.replace("%data%", projects.projects[project].link);
+			//$(".project-entry:last").append(formattedLink);
+
 			var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-			$(".project-entry:last").append(formattedTitle);
+			$(".project-entry:last").append(formattedLink+formattedTitle);
 
 			var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
 			$(".project-entry:last").append(formattedDates);
