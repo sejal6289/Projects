@@ -189,6 +189,13 @@ var work = {
 var projects = {
 	"projects": [
 		{
+			"title": "Website Optimization",
+			"link" : "http://sejal6289.github.io/Project-4-website-optimization/index.html",
+			"dates": "March 2016",
+			"desc": "Optimized a provided website to achieve target Page Speed score and runs at 60 fps. Implemented gulp animation for Image, CSS, JavaScript and HTML minification. Used Timeline panel in Chrome DevTools to solve performance-related issues.",
+			"images": []
+		},
+		{
 			"title": "Classic Arcade Game Clone",
 			"link" : "https://rawgit.com/sejal6289/Project-3---Arcade-game-clone/master/index.html",
 			"dates": "March 2016",
