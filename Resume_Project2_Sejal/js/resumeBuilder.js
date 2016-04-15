@@ -14,7 +14,7 @@ var bio = {
 		"location" : "Hillsboro, Oregon"
 	}],
 	"welcomemessage" : "<br>I have positive attitude, creativity and a hands-on approach to design and implementation. With fundamental values of client satisfaction, quality and teamwork, I maintain a constant vision of innovation to remain on the cutting edge of design technology.",
-	"skills" : ["HTML/HTML5","CSS/Bootstrap", "JavaScript(Jquery)", "Java", "C++", "C", "PL/SQL", "Android development"],
+	"skills" : ["HTML/HTML5","CSS/Bootstrap", "JavaScript(Jquery)", "AJAX", "Responsive Design", "Wordpress", "C/C++", "MYSQL"],
 	"biopic" : "images/me.jpg",
 	"pdf" : "images/pdf.gif",
 	"doc" : "images/doc.gif",
